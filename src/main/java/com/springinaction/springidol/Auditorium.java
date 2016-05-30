@@ -7,4 +7,7 @@ public class Auditorium {
 	public void turnOfLights(){
 		System.out.println("turn off Lights");
 	}
+	public void test(){
+		
+	}
 }
