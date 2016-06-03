@@ -97,6 +97,9 @@
 	</aop:config>
 	
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
-	
+		<property name="driverClassName" value="org.hsqldb.jdbcDriver"/>
+		<property name="url" value="jdbc:hsqldb:hsql://172.16.53.200:3306/ufenqi_db"/>
+		<property name="username" value="root"/>
+		<property name="password" value="Ufenqi@123"/>
 	</bean>
 </beans>
