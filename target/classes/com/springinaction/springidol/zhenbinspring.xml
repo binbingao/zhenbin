@@ -95,4 +95,8 @@
 			method="demandRefund"/>
 		</aop:aspect>
 	</aop:config>
+	
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+	
+	</bean>
 </beans>
