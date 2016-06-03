@@ -6,17 +6,20 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class Test {
 
 	public static void main(String[] args) throws PerformanceException {
-		ApplicationContext ac=new ClassPathXmlApplicationContext("com/springinaction/springidol/zhenbinspring.xml");
+		ApplicationContext ac=new ClassPathXmlApplicationContext("com/springinaction/springidol/zhenbinspringnew.xml");
 		/*Juggler juggler1=(Juggler) ac.getBean("duke");
 		juggler1.perform();*/
 		
-		PoeticJuggler pj1=(PoeticJuggler) ac.getBean("poeticDuke");
+		/*PoeticJuggler pj1=(PoeticJuggler) ac.getBean("poeticDuke");
 		pj1.perform();
 		
 		Instrumentalist ins1=(Instrumentalist) ac.getBean("kenny");
-		ins1.perform();
+		ins1.perform();*/
 		//OneManBand omb=(OneManBand) ac.getBean("hank");
 		//omb.perform();
+		JdbcSpitterDAO jdbcSpitterDAO=(JdbcSpitterDAO) ac.getBean("spitterDao");
+		PayNoDao paydao=jdbcSpitterDAO.getPayNoByUserId(249);
+		System.out.println(paydao.getPayNo());
 		
 	}
 
